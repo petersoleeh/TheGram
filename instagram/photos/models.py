@@ -23,3 +23,12 @@ class Post(models.Model):
 
     def __str__(self):
         return self.caption
+
+
+class Connect(models.Model):
+    follower = models.ForeignKey(User, related_name='follower')
+    following = models.ForeignKey(User, related_name='following')
+
+
+    def __str__(self):
+        return self.follower.username + ' : '+self.following.username
