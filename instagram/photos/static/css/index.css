@@ -1,3 +1,23 @@
-h1{
-  color: red;
+.navbar-inverse{
+  background-color: #ffffff !important;
+  color:inherit;
+  border: none;
+  font-size: 18px;
 }
+#inslogo{
+  margin-left: 236px;
+}
+
+body{
+  height: 100%;
+  padding: 80px;
+  color: #000000;
+  background-color: #fafafa;
+  line-height: 20px;
+  font-weight: normal;
+  overflow-y: scroll;
+}
+
+/*h1{
+  margin-left: 180px;
+}*/
