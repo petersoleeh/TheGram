@@ -9,12 +9,13 @@
   {%if title%}
   <title>Instagram - {{title}}</title>
   {%else%}
-  <title>instagram </title>
+  <title>Instagram </title>
   {%endif%}
 
   {%block styles%}
     {%bootstrap_css%}
     <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/inlogo.png' %}"/>
   {%endblock%}
 
 </head>

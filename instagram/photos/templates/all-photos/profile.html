@@ -3,7 +3,20 @@
 {% block content %}
 {{block.super}}
 
-<div class="container">
-  <h1>the profile page</h1>
-</div>
+<header class="container" id="profile">
+  <h1>{{user.username}}</h1>
+  <img src="" alt="photo">
+  <button type="button" name="button">Follow</button>
+  <ul>
+    <li>20 posts</li>
+    <li>465 followers</li>
+    <li>427 following</li>
+  </ul>
+</header>
+{%for post_item in post%}
+  <h1>{{post_item.caption}}</h1>
+  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+    <img src="{{post_item.post_img.url}}" alt="img-responsive" width="500">
+  </div>
+{%endfor%}
 {%endblock%}
