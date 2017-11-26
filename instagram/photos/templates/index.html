@@ -2,7 +2,10 @@
 
 {% block content %}
 {{block.super}}
-<div class="container">
-<h1>Index page</h1>
-</div>
+{%if user.is_authenticated%}
+  <h1>Welcome to your timeline</h1>
+{%else%}
+  <p>Welcome, Please sign up</p>
+
+{%endif%}
 {%endblock%}
