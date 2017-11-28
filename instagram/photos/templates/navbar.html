@@ -39,10 +39,13 @@
               {% if user.is_authenticated %}
               <ul>
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle btn " data-toggle="dropdown" role="" aria-expanded="false">{{user.username}}
+                  <a href="/" class="dropdown-toggle btn " data-toggle="dropdown" role="" aria-expanded="false">{{user.username}}
                             <span class="caret"></span>
                         </a>
                   <ul class="dropdown-menu" role="menu">
+                    <li>
+                      <a href="/profile">Profile</a>
+                    </li>
                     <li>
                       <a href="/accounts/password/change">Change Password</a>
                     </li>
@@ -50,6 +53,9 @@
                       <a href="/logout">Logout</a>
                     </li>
                   </ul>
+                </li>
+                <li>
+                  <a href="/new/post">create post</a>
                 </li>
               </ul>
               {% else %}
