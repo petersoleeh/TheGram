@@ -1,6 +1,7 @@
 from django.db import models
 import datetime as dt
 from django.contrib.auth.models import User
+from tinymce.models import HTMLField
 # Create your models here.
 
 
@@ -19,6 +20,7 @@ class Post(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     post_img = models.ImageField(upload_to = 'photos/', blank = True)
     comment = models.ForeignKey(Comment)
+
 
 
     def __str__(self):

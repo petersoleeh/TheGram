@@ -4,19 +4,28 @@
 {{block.super}}
 
 <header class="container" id="profile">
-  <h1>{{user.username}}</h1>
-  <img src="" alt="photo">
-  <button type="button" name="button">Follow</button>
+  <h1>@{{user.username}}</h1>
+  <button class="btn btn-primary"type="button" name="button">Edit Profile</button>
   <ul>
-    <li>20 posts</li>
-    <li>465 followers</li>
-    <li>427 following</li>
+    <li>{{post|length}} posts</li> |
+    <li>{{follower|length}} followers</li> |
+    <li>{{following|length}} following</li>
   </ul>
 </header>
 {%for post_item in post%}
-  <h1>{{post_item.caption}}</h1>
-  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-    <img src="{{post_item.post_img.url}}" alt="img-responsive" width="500">
-  </div>
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <a href="/profile">{{ post_item.user }}</a> |
+        <a href="/">{{ post_item.upl_date|timesince }}</a>
+    </div>
+    <div class="panel-body">
+      <h5>{{ post_item.caption }}</h5>
+      <img src="{{ post_item.post_img.url }}" alt="{{ post_item.caption }}" width="500px" />
+    </div>
+    <div class="panel-footer">
+        <input type="text" class="form-control" placeholder="Add a comment..." aria-describedby="comment">
+        </div>
+    </div>
+</div>
 {%endfor%}
 {%endblock%}
