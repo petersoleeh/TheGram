@@ -5,7 +5,7 @@
 
 <header class="container" id="profile">
   <h1>@{{user.username}}</h1>
-  <button class="btn btn-primary"type="button" name="button">Edit Profile</button>
+  <a href="{% url 'edit-profile' %}"><button class="btn btn-primary"type="button" name="button">Edit Profile</button></a>
   <ul>
     <li>{{post|length}} posts</li> |
     <li>{{follower|length}} followers</li> |
@@ -13,6 +13,7 @@
   </ul>
 </header>
 {%for post_item in post%}
+<div class="container">
 <div class="panel panel-default">
     <div class="panel-heading">
         <a href="/profile">{{ post_item.user }}</a> |

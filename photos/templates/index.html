@@ -1,0 +1,29 @@
+{%extends 'all-photos/base.html'%}
+{%load bootstrap3%}
+
+{% block content %}
+{{block.super}}
+
+<div class="container">
+  <h1>Welcome to your timeline</h1>
+</div>
+{%for post_item in post%}
+<div class="container">
+  <div class="panel panel-default">
+  <div class="panel-heading">
+      <a href="/profile">{{ post_item.user }}</a> |
+      <a href="/">{{ post_item.upl_date|timesince }}</a>
+  </div>
+  <div class="panel-body">
+    <h5>{{ post_item.caption }}</h5>
+    <img src="{{ post_item.post_img.url }}" alt="{{ post_item.caption }}" width="500px" />
+  </div>
+  <div class="panel-footer">
+    <i class="fa fa-heart" aria-hidden="true" width="27px"></i>Likes:{{p|length}}<input type="text" class="form-control" placeholder="Add a comment..." aria-describedby="comment">
+  </div>
+  </div>
+</div>
+
+  {%endfor%}
+
+{%endblock%}

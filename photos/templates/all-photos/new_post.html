@@ -1,0 +1,18 @@
+{%extends 'all-photos/base.html'%}
+{%load bootstrap3%}
+
+{% block content %}
+{{block.super}}
+{%if user.is_authenticated%} <br>
+  <div class="container">
+    <form  action="{%url 'new-post' %}" method="post">
+      {%csrf_token%}
+
+      {{form.as_p}}
+
+      <input type="submit"class="btn btn-primary" name="" value="Post">
+
+    </form>
+  </div>
+{%endif%}
+{%endblock%}
