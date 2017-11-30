@@ -12,6 +12,8 @@ body{
   height: 100%;
   padding: 80px;
   color: #000000;
+  margin-left: 80px;
+  margin-right: 80px;
   background-color: #fafafa;
   line-height: 20px;
   font-weight: normal;
