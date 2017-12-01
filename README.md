@@ -43,7 +43,7 @@ These instructions will get you a copy of the project up and running on your loc
  
  ## Known Bugs
  <ul>
-  <li>A user can only comment the selected option comment options</li>
+  <li>A user can only comment the selected comment options </li>
   <li>The follow/follower section is currently not working</li>
  </ul>
  
