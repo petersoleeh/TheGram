@@ -2,8 +2,9 @@
 A clone of Instagram
 #### Created by [Peter Maina](https://github.com/petersoleeh) 
 ## Description
+A user will sign in the website first to use it. The user will then create a new post by filling in the new post form. The
+post form will have fields for caption,image and a comment. After the user hits the post button the caption and the image will be posted to the index page. The user can also follow other users to see their posts.
 
-### to update
 
 
 ## Getting Started
@@ -41,7 +42,10 @@ These instructions will get you a copy of the project up and running on your loc
  </ul>
  
  ## Known Bugs
-  ### to update
+ <ul>
+  <li>A user can only comment the selected option comment options</li>
+  <li>The follow/follower section is currently not working</li>
+ </ul>
  
  
  ## Support and contact details
