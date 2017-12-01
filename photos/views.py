@@ -39,6 +39,8 @@ def new_post(request):
             post.user = current_user
             post.save()
 
+            return redirect('index')
+
     else:
         form = NewPostForm()
 

@@ -5,7 +5,7 @@
 {{block.super}}
 {%if user.is_authenticated%} <br>
   <div class="container">
-    <form  action="{%url 'new-post' %}" method="post">
+    <form  action="{%url 'new-post' %}" method="post" enctype="multipart/form-data">
       {%csrf_token%}
 
       {{form.as_p}}
